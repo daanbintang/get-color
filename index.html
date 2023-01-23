@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Color Flipper</title>
+  </head>
+
+  <body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 to-cyan-900">
+      <nav
+        class="flex items-center justify-around px-20 py-2 text-white shadow-lg"
+      >
+        <h1 class="font-bold text-xl">Color Flipper</h1>
+        <ul class="flex items-center gap-x-5">
+          <li>Simple</li>
+          <li>Hex</li>
+        </ul>
+      </nav>
+      <main class="flex flex-col text-white mt-20">
+        <h1
+          id="colors"
+          class="shadow-2xl px-4 rounded-xl w-[50%] mx-auto text-4xl font-bold py-10 my-10 text-center bg-[#da373d]"
+        >
+          #da373d
+        </h1>
+        <form class="mx-auto flex items-center">
+          <input
+            type="text"
+            name="searchColor"
+            id="searchColor"
+            placeholder="Search Color"
+            class="rounded-l-full px-4 text-black border-none focus:outline-none"
+          />
+          <button
+            type="submit"
+            id="btn"
+            class="bg-blue-500 px-4 rounded-r-full font-semibold"
+          >
+            Search
+          </button>
+        </form>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
